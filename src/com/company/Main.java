@@ -32,7 +32,7 @@ public class Main {
             // Scann File Input
             readFileIn.useDelimiter("(\\p{javaWhitespace}|\\.|,)+");
             while (readFileIn.hasNext()){
-                String perKata = readFileIn.next();
+                String perKata = readFileIn.next().toLowerCase();
 
                 Kata kata = new Kata(perKata);
                 wordList.add(kata);
@@ -41,7 +41,7 @@ public class Main {
             // Scann Kamus
             readKamus.useDelimiter("");
             while (readKamus.hasNext()){
-                String kataKamus = readKamus.nextLine();
+                String kataKamus = readKamus.nextLine().toLowerCase();
 
                 kamusList.add(kataKamus);
             }
